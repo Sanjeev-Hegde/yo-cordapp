@@ -39,7 +39,7 @@ RUN cd /opt/corda/src && \
     sync && \
     chmod +x gradlew && \
  #  ./gradlew -Dhttp.proxyHost=webproxy.prd.lab-nxtit.priv -Dhttp.proxyPort=3128 -Dhttps.proxyHost=webproxy.prd.lab-nxtit.priv -Dhttps.proxyPort=3128 deployNodeUAT && \
-   ./gradlew  deployNodes && \
+   ./gradlew  deployNodesUAT && \
    sync
 
 RUN chmod +x /run-corda.sh && \
@@ -60,6 +60,7 @@ USER 10001
 EXPOSE 10002
 EXPOSE 10003
 EXPOSE 10043
+EXPOSE 10004
 
 # Start it
 CMD ["/run-corda.sh"]
