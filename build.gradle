@@ -121,8 +121,8 @@ task deployNodesUAT(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         notary = [validating : true]
         p2pAddress  "corda-node-entity1.corda-oc.svc:10002"
         rpcSettings {
-            address("0.0.0.0:10003")
-            adminAddress("0.0.0.0:10043")
+            address("corda-node-entity2.corda-oc.svc:10003")
+            adminAddress("corda-node-entity2.corda-oc.svc:10043")
         }
         cordapps = []
 
@@ -131,8 +131,8 @@ task deployNodesUAT(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         name "O=PartyA,L=London,C=GB"
         p2pAddress  "corda-node-entity2.corda-oc.svc:10002"
         rpcSettings {
-            address("0.0.0.0:10003")
-            adminAddress("0.0.0.0:10043")
+            address("corda-node-entity2.corda-oc.svc:10003")
+            adminAddress("corda-node-entity2.corda-oc.svc:10043")
         }
         webPort 10004
         cordapps = []
@@ -142,8 +142,8 @@ task deployNodesUAT(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         name "O=PartyB,L=New York,C=US"
         p2pAddress  "corda-node-entity3.corda-oc.svc:10002"
         rpcSettings {
-            address("0.0.0.0:10003")
-            adminAddress("0.0.0.0:10043")
+            address("corda-node-entity2.corda-oc.svc:10003")
+            adminAddress("corda-node-entity2.corda-oc.svc:10043")
         }
         webPort 10004
         cordapps = []
