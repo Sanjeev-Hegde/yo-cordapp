@@ -38,8 +38,8 @@ COPY . /opt/corda/src
 RUN cd /opt/corda/src && \
     sync && \
     chmod +x gradlew && \
- #  ./gradlew -Dhttp.proxyHost=webproxy.prd.lab-nxtit.priv -Dhttp.proxyPort=3128 -Dhttps.proxyHost=webproxy.prd.lab-nxtit.priv -Dhttps.proxyPort=3128 deployNodeUAT && \
-   ./gradlew  deployNodesUAT && \
+   ./gradlew -Dhttp.proxyHost=webproxy.prd.lab-nxtit.priv -Dhttp.proxyPort=3128 -Dhttps.proxyHost=webproxy.prd.lab-nxtit.priv -Dhttps.proxyPort=3128 deployNodeUAT && \
+ #  ./gradlew  deployNodesUAT && \
    sync
 
 RUN chmod +x /run-corda.sh && \
